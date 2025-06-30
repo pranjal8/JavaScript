@@ -1,24 +1,43 @@
-const array=[42];
-const array1 =new Array(42, "Hello", "myVar", 3.14159);
-console.log(array1,"array1 length:-", array1.length, "array length:-", array.length)
+const array = [42];
+const array1 = new Array(42, "Hello", "myVar", 3.14159);
+const array2 = Array.of(9.6, 6.7);
 
-const arr= Array.of(9.6, 6.7);
-console.log(arr, "length:-",  arr.length)
+let arr = ["I", "study", "JavaScript", "right", "now"];
+let removedItems = arr.splice(1, 2);
+console.log(arr, removedItems);
 
-const myArray = ["Wind", "Rain", "Fire", 40, 50 ,10];
-myArray[1.6] ='Orange';
-myArray[1.7] ='Mango';
-myArray[1.8] ='Apple';
-myArray[1.9] ='Banana';
-console.log(myArray)
+let fruits = ["Apple", "Orange", "Apple"];
+console.log(fruits.indexOf("Apple"), fruits.lastIndexOf("Apple"));
 
-const cats = [];
-cats[30] = ["Dusty"];
-cats.length = 5
-console.log(cats, "length:-",  cats.length);// 31
+let nanArray = [NaN];
+console.log(nanArray.includes(NaN), nanArray.indexOf(NaN));
 
-const data = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisleclg";
-const cities= data.split(',')
-console.log(data , cities, cities.length, cities[cities.length-1])
-const commaSeparated = cities.join(",");
-console.log(commaSeparated);
+let users = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Pete" },
+  { id: 3, name: "Mary" },
+];
+
+//The find method looks for a single (first) element that makes the function return true.
+const res = users.find((item) => item.id < 3);
+
+//but filter returns an array of all matching elements:
+const res2 = users.filter((item) => item.id < 3);
+console.log(res)
+console.log(res2);
+
+const nums=[1,8,3, 15,8] //sort()-->The items are sorted as strings by default.
+console.log(nums.sort(
+    function(a,b){
+   return a-b
+    }
+))
+
+console.log(nums.reverse())
+
+let names = 'Bilbo, Gandalf, Nazgul';
+let namesArr=['Bilbo', 'Gandalf', 'Nazgul']
+
+console.log(names.split(', ') , names.split('', 4) );
+
+console.log(namesArr.join('_'))

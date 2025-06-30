@@ -6,6 +6,10 @@ console.log(fruits.length); // 4
 That’s because arrays are objects. So both shoppingCart and fruits are the references to the same array.
 */
 
+
+
+
+
 let arr = ["a", "b"];
 arr.push(function () {
   alert(this);
